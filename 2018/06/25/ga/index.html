@@ -7,20 +7,20 @@
   
   
   
-  <title>about | 老猫码坊</title>
+  <title>开发人员 在linux服务器上查看日记常用命令 | 老猫码坊</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在技术的成长道路上，遇到更好的自己。">
-<meta name="keywords" content="Java Spring Linux Mysql">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://www.easytouseit.win/about/index.html">
+  <meta name="description" content="程序不可能没有bug。即使通过测试的程序在上线后也可能出现报错问题。所以一般在职程序员经常要做一件事情：就是从某应用程序的日记其中找出自己想要的信息（程序报错的信息，从而定位到程序出错在哪个类，哪行）。本文总结了我在工作中使用了哪些命令来分析Log文件获取我想要的信息。 下面介绍我自己常用的一些linux命令（如果有什么错误或者不对的地方欢迎指出，也请大家多多指教）： 1、tail 命令1.1 t">
+<meta name="keywords" content="linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发人员 在linux服务器上查看日记常用命令">
+<meta property="og:url" content="https://www.easytouseit.win/2018/06/25/ga/index.html">
 <meta property="og:site_name" content="老猫码坊">
-<meta property="og:description" content="在技术的成长道路上，遇到更好的自己。">
+<meta property="og:description" content="程序不可能没有bug。即使通过测试的程序在上线后也可能出现报错问题。所以一般在职程序员经常要做一件事情：就是从某应用程序的日记其中找出自己想要的信息（程序报错的信息，从而定位到程序出错在哪个类，哪行）。本文总结了我在工作中使用了哪些命令来分析Log文件获取我想要的信息。 下面介绍我自己常用的一些linux命令（如果有什么错误或者不对的地方欢迎指出，也请大家多多指教）： 1、tail 命令1.1 t">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-23T06:46:10.041Z">
+<meta property="og:updated_time" content="2018-06-26T09:01:40.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="在技术的成长道路上，遇到更好的自己。">
+<meta name="twitter:title" content="开发人员 在linux服务器上查看日记常用命令">
+<meta name="twitter:description" content="程序不可能没有bug。即使通过测试的程序在上线后也可能出现报错问题。所以一般在职程序员经常要做一件事情：就是从某应用程序的日记其中找出自己想要的信息（程序报错的信息，从而定位到程序出错在哪个类，哪行）。本文总结了我在工作中使用了哪些命令来分析Log文件获取我想要的信息。 下面介绍我自己常用的一些linux命令（如果有什么错误或者不对的地方欢迎指出，也请大家多多指教）： 1、tail 命令1.1 t">
   
     <link rel="alternative" href="/atom.xml" title="老猫码坊" type="application/atom+xml">
   
@@ -52,7 +52,7 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -279,11 +279,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ga" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/about/index.html" class="article-date">
-      <time datetime="2018-06-22T18:46:10.000Z" itemprop="datePublished">2018-06-23</time>
+      <a  href="/2018/06/25/ga/" class="article-date">
+      <time datetime="2018-06-25T20:52:00.000Z" itemprop="datePublished">2018-06-26</time>
 </a>
 
     </div>
@@ -297,7 +297,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      开发人员 在linux服务器上查看日记常用命令
     </h1>
   
 
@@ -306,8 +306,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -315,53 +323,142 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta {
-        display: none;
-    }
-    #container .article .article-title {
-        padding-right: 0;
-    }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover {
-        border-left: none;
-    }
-    .article-title {
-        font-size: 1.6em
-    }
-    .article-meta {
-        display: none;
-    }
-    .article-entry hr {
-        margin: 0;
-    }
-    #container .article-info-post.article-info {
-      display: none;
-      }
-    #container .article .article-title {
-    padding: 0;
-    }
-</style>
+        <p>程序不可能没有bug。即使通过测试的程序在上线后也可能出现报错问题。所以一般在职程序员经常要做一件事情：就是从某应用程序的日记其中找出自己想要的信息（程序报错的信息，从而定位到程序出错在哪个类，哪行）。本文总结了我在工作中使用了哪些命令来分析Log文件获取我想要的信息。</p>
+<p>下面介绍我自己常用的一些linux命令（如果有什么错误或者不对的地方欢迎指出，也请大家多多指教）：</p>
+<p>1、tail 命令<br>1.1 tail命令默认在屏幕上显示指定文件的末尾10行</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>默认显示最新10行</p>
+<p>1.2 tail -f 当文件增长时,输出后续添加的数据;</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>自动显示新增的文件内容</p>
+<p>1.3 tail -f catalina.out -n 200 查看底部即最新200条日记记录，自动显示新增的文件内容</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>查看最后200条日记记录</p>
+<p>1.4 tail -f catalina.out |grep “HeartbeatHandler” -C 2 查看字符”HeartbeatHandler” 前后2条记录，自动显示新增的文件内容</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>查看指定的字符串前后几行的最新记录</p>
+<p>1.5 tail -f *.log 同时监视多个文件的变化 自动显示新增的文件内容 文件排列显示</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>同时查看多个文件</p>
+<p>1.6 退出，按下CTRL+C。</p>
+<p>2 vi命令<br>ps:这个命令我用的少，不过我老大一直在用</p>
+<p>vi命令是linux操作系统中最通用的全屏幕纯文本编辑器</p>
+<p>其中参数 -R：表示以只读方式打开文件；</p>
+<p>2.1 vi -R catalina.out</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>vi只读模式打开文件</p>
+<p>2.2 进去后光标定位在首行 要让它显示行号话：输入:set nu</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>显示行号</p>
+<p>2.3 要跳到文件的开始的位置即第一行：输入gg</p>
+<p>2.4 要跳到文件的结束的位置即最后一行:输入G</p>
+<p>2.4 要跳到文件的指定的位置 如到定位到第100行：输入100G</p>
+<p>在vi里面用Go的缩写字母g表示光标跳动</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>定位到第100行的位置</p>
+<p>2.5 从文件头往后面搜索字符串“==”：输入 :/==</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>向后搜索指定字符</p>
+<p>2.6 从文件尾往前搜索字符串“==”:输入 :?==</p>
+<p>2.7 在搜索字符串的过程中要找到下一个符合搜索条件的地方:按n</p>
+<p>2.8 在搜索字符串的过程中要找到上一个符合搜索条件的地方：按N</p>
+<p>在vi里面字母n是Next的缩写 表示下一个</p>
+<p>2.9 退出vi的命令是：:q!</p>
+<p>3 less命令<br>这个命令是我常用的命令，不过时间一久就会忘记一些常用的操作</p>
+<p>less命令可以用来浏览文字文件的内容，用less命令显示文件时，允许用户向前或向后浏览文件。</p>
+<p>3.1 less catalina.out 进入后显示的是文件的首页</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>less命令</p>
+<p>3.2 从文件头往后面搜索字符串“==”：输入 /==</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>向下搜索</p>
+<p>3.3 从文件尾往前搜索字符串”==“:输入 ?==</p>
+<p>3.4 在搜索字符串的过程中要找到下一个符合搜索条件的地方:按n （与 / 或 ? 有关）</p>
+<p>3.5 在搜索字符串的过程中要找到上一个符合搜索条件的地方：按N （与 / 或 ? 有关）</p>
+<p>3.6 按 b 向后翻一页 ，按 d 向后翻半页</p>
+<p>3.7按u 向前滚动半页 ，按y 向前滚动一行 按空格键 滚动一行 ，按回车键 滚动一页</p>
+<p>3.8 less catalina.out | grep “==” | wc -l 显示 字符串中文件中出现的次数</p>
+<p>开发人员 在linux服务器上查看日记常用命令</p>
+<p>统计错误出现的次数</p>
+<p>3.9 要退出less程序，应按Q键。</p>
+<p>以上记录的常用命令 只有本人自己常用 ，整理出来跟大家一起交流。不喜勿喷，我的内心很脆弱。谢谢！</p>
 
-
-          
-        
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2018/06/25/ga/">开发人员 在linux服务器上查看日记常用命令</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 老猫 的个人博客">老猫</a></p>
+        <p><span>发布时间:</span>2018年06月26日 - 04时52分</p>
+        <p><span>最后更新:</span>2018年06月26日 - 05时01分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/06/25/ga/" title="开发人员 在linux服务器上查看日记常用命令">https://www.easytouseit.win/2018/06/25/ga/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://www.easytouseit.win/2018/06/25/ga/　　作者: 老猫" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2018/06/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
 
 
 
@@ -385,7 +482,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: 'Sat Jun 23 2018 02:46:10 GMT+0800',
+  id: 'Tue Jun 26 2018 04:52:00 GMT+0800',
   owner: 'guojianming',
   repo: 'blog',
   oauth: {
@@ -400,6 +497,41 @@ gitment.render('comments')
     
 
 
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2018/06/21/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/06/25/ga/">开发人员 在linux服务器上查看日记常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/21/hello-world/">Hello World</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
