@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>Hexo 下博客写文章的常用Markdown语法记录 | 老猫码坊</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="老猫第一次用Markdown格式的文件写博客，很多语法格式都不清楚，而且用过的语法也很难记住，所以专门写一篇文章来记录一下常用的Markdown语法，以后要写文章的时候就来看一下。">
+<meta name="keywords" content="markdown,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 下博客写文章的常用Markdown语法记录">
+<meta property="og:url" content="https://www.easytouseit.win/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/index.html">
+<meta property="og:site_name" content="老猫码坊">
+<meta property="og:description" content="老猫第一次用Markdown格式的文件写博客，很多语法格式都不清楚，而且用过的语法也很难记住，所以专门写一篇文章来记录一下常用的Markdown语法，以后要写文章的时候就来看一下。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/timg%20%287%29.jpg">
+<meta property="og:updated_time" content="2018-07-09T15:57:01.862Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo 下博客写文章的常用Markdown语法记录">
+<meta name="twitter:description" content="老猫第一次用Markdown格式的文件写博客，很多语法格式都不清楚，而且用过的语法也很难记住，所以专门写一篇文章来记录一下常用的Markdown语法，以后要写文章的时候就来看一下。">
+<meta name="twitter:image" content="http://payu91z1p.bkt.clouddn.com/timg%20%287%29.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="老猫码坊" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+<!--
+  <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/8ec92ca9.js","daovoice")</script>
+ <script> 
+ daovoice('init', {
+      app_id: "8ec92ca9"
+    });
+  daovoice('update');
+  </script>
+-->
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+  
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <a href="https://github.com/guojianming"><img style="position: absolute; top: 0; left: 0; border: 0;z-index:9999;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png" alt="Fork me on GitHub"></a>
+<div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">老猫</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">老猫的个人博客</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/">主页</a></li>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                            <li><a  href="/tags">归档</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/guojianming" title="github">github</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://hexo.io">hexo</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://www.toutiao.com/c/user/3212003322/#mid=1590270407788548">头条号</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://mp.weixin.qq.com/s/d3Putc1YP_9njr7CoZBkNw">公众号</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">相比聪明，更爱靠谱!</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">老猫</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">老猫</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">老猫的个人博客</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                    <li><a href="/tags">归档</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="https://github.com/guojianming" title="github">github</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-Hexo-下博客写文章的常用Markdown语法记录" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/" class="article-date">
+      <time datetime="2018-07-07T13:53:00.000Z" itemprop="datePublished">2018-07-07</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo 下博客写文章的常用Markdown语法记录
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/hexo写博客/">hexo写博客</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>老猫第一次用Markdown格式的文件写博客，很多语法格式都不清楚，而且用过的语法也很难记住，所以专门写一篇文章来记录一下常用的Markdown语法，以后要写文章的时候就来看一下。<br><a id="more"></a></p>
+<p><img src="http://payu91z1p.bkt.clouddn.com/timg%20%287%29.jpg" alt="">   </p>
+<p><strong>常用语法</strong>  </p>
+<ul>
+<li>分段 两个回车  </li>
+<li>换行 两个空格 + 回车  </li>
+<li>引用 &gt; 注意后面紧跟个空格</li>
+<li>表格 - 和 | 分割行和列 ， : 控制对其方式  </li>
+<li>链接 &#91;文字](链接地址)  </li>
+<li>图片 &#33;&#91;说明](链接地址) ，地址可以是本地路劲，也可以是网络地址  </li>
+<li>列表 * ， + ， - ， 1. ，选其中之一，注意后面紧跟个空格  </li>
+</ul>
+<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>可以在相应标题文字前加上#号，#号越多标题文字小。#号的个数表示几级标题，即表示一级标题到六级标题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br><span class="line">````  </span><br><span class="line"></span><br><span class="line">**查看显示效果：**  </span><br><span class="line"></span><br><span class="line"># 一级标题  </span><br><span class="line">## 二级标题  </span><br><span class="line">### 三级标题  </span><br><span class="line">#### 四级标题  </span><br><span class="line">##### 五级标题  </span><br><span class="line">###### 六级标题  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 粗体斜体</span><br></pre></td></tr></table></figure>
+<p>字体 <strong>加粗</strong> 显示<br>字体 <em>斜体</em> 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示<br>字体 <strong>加粗</strong> 显示<br>字体 _斜体_ 显示<br>字体 <strong><em>加粗并斜体</em></strong> 显示<br>组合 <em><strong>加粗并斜体</strong></em> 显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">**查看显示效果：**  </span><br><span class="line"></span><br><span class="line">字体 **加粗** 显示  </span><br><span class="line">字体 *斜体* 显示  </span><br><span class="line">字体 ***加粗并斜体*** 显示  </span><br><span class="line">字体 __加粗__ 显示  </span><br><span class="line">字体 _斜体_ 显示  </span><br><span class="line">字体 ___加粗并斜体___ 显示  </span><br><span class="line">组合 *__加粗并斜体__* 显示  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 删除线</span><br></pre></td></tr></table></figure></p>
+<p><del>需要删除的文字</del><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">**查看显示效果：**  </span><br><span class="line"></span><br><span class="line">~~需要删除的文字~~  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 代码块</span><br><span class="line">```java  </span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class DemoApplication &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		SpringApplication.run(DemoApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> ```  </span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">## 文字高亮</span><br></pre></td></tr></table></figure></p>
+<p>使用<code>`</code>来强调字符   //想打出  <code>(反引号)需要转义的，加&lt;code&gt;&lt;/code&gt;标签强调  
+比如</code>突出背景色`来显示强调效果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**查看显示效果：**  </span><br><span class="line"></span><br><span class="line">使用&lt;code&gt;\`&lt;/code&gt;来强调字符   //想打出  (反引号)需要转义的，加`&lt;code&gt;&lt;/code&gt;`标签强调  </span><br><span class="line">比如`突出背景色`来显示强调效果  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 表格</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>列1</th>
+<th>列2</th>
+<th>列3 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1行</td>
+<td>12</td>
+<td>13  </td>
+</tr>
+<tr>
+<td>第2行</td>
+<td>22</td>
+<td>23  </td>
+</tr>
+<tr>
+<td>第3行</td>
+<td>32</td>
+<td>33 </td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">**查看显示效果：**   </span><br><span class="line"></span><br><span class="line">| 左对齐    |  右对齐 | 居中 |  </span><br><span class="line">| :-------- | -------:| :--: |  </span><br><span class="line">| Computer  | 5000 元 |  1台 |  </span><br><span class="line">| Phone     | 1999 元 |  1部 | </span><br><span class="line"></span><br><span class="line">## 分隔符</span><br></pre></td></tr></table></figure>
+<p>前面的段落</p>
+<hr>
+<p>后面的段落<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">**查看显示效果：**    </span><br><span class="line"></span><br><span class="line">前面的段落</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">后面的段落  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 图片居中</span><br></pre></td></tr></table></figure></p>
+<p><div align="center"><br><img src="" alt=""><br></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 引用</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>每行开始都使用 ‘&gt;’；<br>引用<strong>开始</strong>；<br>引用<strong>换行</strong>；<br>引用<strong>结束</strong>。</p>
+</blockquote>
+<blockquote>
+<p>还在引用中！</p>
+</blockquote>
+<p>两个回车结束引用！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">**查看显示效果：**  </span><br><span class="line"></span><br><span class="line">&gt; 每行开始都使用 &apos;&gt;&apos;；  </span><br><span class="line">&gt; 引用**开始**；  </span><br><span class="line">&gt; 引用**换行**；  </span><br><span class="line">&gt; 引用**结束**。  </span><br><span class="line"></span><br><span class="line">&gt; 还在引用中！  </span><br><span class="line"></span><br><span class="line">两个回车结束引用！</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 引用里嵌套引用</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>最外层引用  </p>
+<blockquote>
+<p>多一个 &gt; 嵌套一层引用  </p>
+<blockquote>
+<p>可以嵌套很多层<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">**查看显示效果：**   </span><br><span class="line"></span><br><span class="line">&gt; 最外层引用</span><br><span class="line">&gt; &gt; 多一个 &gt; 嵌套一层引用</span><br><span class="line">&gt; &gt; &gt; 可以嵌套很多层</span><br><span class="line"></span><br><span class="line">## 注释</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<!-- 注释 -->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 列表</span><br></pre></td></tr></table></figure>
+<ul>
+<li>列表文本前使用 [减号+空格]</li>
+</ul>
+<ul>
+<li>列表文本前使用 [加号+空格]</li>
+</ul>
+<ul>
+<li>列表文本前使用 [星号+空格]</li>
+</ul>
+<ol>
+<li>列表前使用 [数字+空格]</li>
+<li>我们会自动帮你添加数字</li>
+<li><p>不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3</p>
+</li>
+<li><p>列出所有元素：</p>
+<ul>
+<li>无序列表元素 A<ol>
+<li>元素 A 的有序子列表</li>
+</ol>
+</li>
+<li>前面加四个空格</li>
+</ul>
+</li>
+<li>列表里的多段换行：<br> 前面必须加四个空格，<br> 这样换行，整体的格式不会乱</li>
+<li><p>列表里引用：</p>
+<blockquote>
+<p>前面空一行<br>仍然需要在 &gt;  前面加四个空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**查看显示效果：**  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 列表文本前使用 [减号+空格]</span><br><span class="line">+ 列表文本前使用 [加号+空格]</span><br><span class="line">* 列表文本前使用 [星号+空格]</span><br><span class="line"></span><br><span class="line">1. 列表前使用 [数字+空格]</span><br><span class="line">2. 我们会自动帮你添加数字</span><br><span class="line">7. 不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3</span><br><span class="line"></span><br><span class="line">1. 列出所有元素：</span><br><span class="line">    - 无序列表元素 A</span><br><span class="line">        1. 元素 A 的有序子列表</span><br><span class="line">    - 前面加四个空格</span><br><span class="line">2. 列表里的多段换行：</span><br><span class="line">    前面必须加四个空格，</span><br><span class="line">    这样换行，整体的格式不会乱</span><br><span class="line">3. 列表里引用：</span><br><span class="line"></span><br><span class="line">    &gt; 前面空一行</span><br><span class="line">    &gt; 仍然需要在 &gt;  前面加四个空格</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">## 特殊字符</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<p>! &#33; — 惊叹号Exclamation mark<br>” &#34; &quot; 双引号Quotation mark </p>
+<h1 id="35-—-数字标志Number-sign"><a href="#35-—-数字标志Number-sign" class="headerlink" title="&#35; — 数字标志Number sign"></a>&#35; — 数字标志Number sign</h1><p>$ &#36; — 美元标志Dollar sign<br>% &#37; — 百分号Percent sign<br>&amp; &#38; &amp; Ampersand<br>‘ &#39; — 单引号Apostrophe<br>( &#40; — 小括号左边部分Left parenthesis<br>) &#41; — 小括号右边部分Right parenthesis </p>
+<ul>
+<li>&#42; — 星号Asterisk </li>
+</ul>
+<ul>
+<li>&#43; — 加号Plus sign<br>&lt; &#60; &lt; 小于号Less than<br>= &#61; — 等于符号Equals sign <blockquote>
+<p>&#62; &gt; 大于号Greater than<br>? &#63; — 问号Question mark<br>@ &#64; — Commercial at<br>[ &#91; — 中括号左边部分Left square bracket<br>\ &#92; — 反斜杠Reverse solidus (backslash)<br>] &#93; — 中括号右边部分Right square bracket<br>{ &#123; — 大括号左边部分Left curly brace<br>| &#124; — 竖线Vertical bar<br>} &#125; — 大括号右边部分Right curly brace<br><code></code></p>
+</blockquote>
+</li>
+</ul>
+<p>文中的一些列表来至网络。</p>
+<p><strong>结束</strong></p>
+
+      
+    </div>
+    
+  </div>
+ 
+        <! -- 添加捐赠图标 -->
+<div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+           &uarr;<br>
+		   感谢您对作者的支持，将用于服务器空间续费！
+        </span>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- 支付宝打赏图案 -->
+		<img src="http://payu91z1p.bkt.clouddn.com/zhifubao.png" alt="支付宝打赏"> 
+		<!-- 微信打赏图案 -->
+		<img src="http://payu91z1p.bkt.clouddn.com/weixin.png" alt="微信打赏">  
+    </div>
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			$('#donate_board').addClass('hidden');
+			$('#donate_guide').removeClass('hidden');
+		}
+	</script>
+</div>
+<! -- 添加捐赠图标 -->
+
+  
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/">Hexo 下博客写文章的常用Markdown语法记录</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 老猫 的个人博客">老猫</a></p>
+        <p><span>发布时间:</span>2018年07月07日 - 21时53分</p>
+        <p><span>最后更新:</span>2018年07月09日 - 11时57分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/" title="Hexo 下博客写文章的常用Markdown语法记录">https://www.easytouseit.win/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://www.easytouseit.win/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/　　作者: 老猫" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a  href="/2018/06/25/ga/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">开发人员 在linux服务器上查看日记常用命令</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题"><span class="toc-number">1.</span> <span class="toc-text">标题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#35-—-数字标志Number-sign"><span class="toc-number"></span> <span class="toc-text"># — 数字标志Number sign</span></a>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+
+    
+        <section id="comments">
+<link rel="stylesheet" href="/css/gitment.min.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: 'Sat Jul 07 2018 21:53:00 GMT+0800',
+  owner: 'guojianming',
+  repo: 'blog',
+  oauth: {
+    client_id: 'c6207f436ef734401284',
+    client_secret: 'b58a3a229c850a1cf0a1d5b201629b78e98f657f',
+  },
+})
+gitment.render('comments')
+</script>
+</section>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2018/06/25/ga/" title="下一篇: 开发人员 在linux服务器上查看日记常用命令">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/">Hexo 下博客写文章的常用Markdown语法记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/25/ga/">开发人员 在linux服务器上查看日记常用命令</a></li></ul>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 老猫
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo &nbsp;&nbsp;</a>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >码坊到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 1;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?df289a37befb34725a9fe499e9aadfb8";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+<script type="text/javascript" src="/js/love.js"></script>
+</html>
