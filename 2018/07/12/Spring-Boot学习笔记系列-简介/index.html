@@ -7,34 +7,22 @@
   
   
   
-  <title>开发人员 在linux服务器上查看日记常用命令 | 老猫码坊</title>
+  <title>Spring Boot学习笔记系列之Spring Boot简介 | 老猫码坊</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="程序不可能没有bug。即使通过测试的程序在上线后也可能出现报错问题。所以一般在职程序员经常要做一件事情：就是从某应用程序的日记其中找出自己想要的信息（程序报错的信息，从而定位到程序出错在哪个类，哪行）。">
-<meta name="keywords" content="linux">
+  <meta name="description" content="历史背景多年以来，Spring IO平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理。而且随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重；繁多的配置，低下的开发效率，复杂的部署流程以及第三方技术集成难度大。">
+<meta name="keywords" content="Spring Boot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发人员 在linux服务器上查看日记常用命令">
-<meta property="og:url" content="https://www.easytouseit.win/2018/06/25/ga/index.html">
+<meta property="og:title" content="Spring Boot学习笔记系列之Spring Boot简介">
+<meta property="og:url" content="https://www.easytouseit.win/2018/07/12/Spring-Boot学习笔记系列-简介/index.html">
 <meta property="og:site_name" content="老猫码坊">
-<meta property="og:description" content="程序不可能没有bug。即使通过测试的程序在上线后也可能出现报错问题。所以一般在职程序员经常要做一件事情：就是从某应用程序的日记其中找出自己想要的信息（程序报错的信息，从而定位到程序出错在哪个类，哪行）。">
+<meta property="og:description" content="历史背景多年以来，Spring IO平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理。而且随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重；繁多的配置，低下的开发效率，复杂的部署流程以及第三方技术集成难度大。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/a384dee055fa97e980af2ecd20519316.jpg">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard1.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard2.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard3.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard4.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard5.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard6.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard7.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard8.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard9.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard10.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard11.png">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/clipboard12.png">
-<meta property="og:updated_time" content="2018-07-06T06:25:42.188Z">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
+<meta property="og:updated_time" content="2018-07-16T01:22:11.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开发人员 在linux服务器上查看日记常用命令">
-<meta name="twitter:description" content="程序不可能没有bug。即使通过测试的程序在上线后也可能出现报错问题。所以一般在职程序员经常要做一件事情：就是从某应用程序的日记其中找出自己想要的信息（程序报错的信息，从而定位到程序出错在哪个类，哪行）。">
-<meta name="twitter:image" content="http://payu91z1p.bkt.clouddn.com/a384dee055fa97e980af2ecd20519316.jpg">
+<meta name="twitter:title" content="Spring Boot学习笔记系列之Spring Boot简介">
+<meta name="twitter:description" content="历史背景多年以来，Spring IO平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理。而且随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重；繁多的配置，低下的开发效率，复杂的部署流程以及第三方技术集成难度大。">
+<meta name="twitter:image" content="http://payu91z1p.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
   
     <link rel="alternative" href="/atom.xml" title="老猫码坊" type="application/atom+xml">
   
@@ -295,11 +283,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-ga" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Spring-Boot学习笔记系列-简介" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/06/25/ga/" class="article-date">
-      <time datetime="2018-06-25T20:52:00.000Z" itemprop="datePublished">2018-06-26</time>
+      <a  href="/2018/07/12/Spring-Boot学习笔记系列-简介/" class="article-date">
+      <time datetime="2018-07-12T08:34:00.000Z" itemprop="datePublished">2018-07-12</time>
 </a>
 
     </div>
@@ -313,7 +301,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      开发人员 在linux服务器上查看日记常用命令
+      Spring Boot学习笔记系列之Spring Boot简介
     </h1>
   
 
@@ -323,13 +311,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/linux/">linux</a>
+    <a class="article-category-link" href="/categories/Sping-Boot-学习/">Sping Boot 学习</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring-Boot/">Spring Boot</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -339,69 +327,51 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>程序不可能没有bug。即使通过测试的程序在上线后也可能出现报错问题。所以一般在职程序员经常要做一件事情：就是从某应用程序的日记其中找出自己想要的信息（程序报错的信息，从而定位到程序出错在哪个类，哪行）。<br><a id="more"></a><br><img src="http://payu91z1p.bkt.clouddn.com/a384dee055fa97e980af2ecd20519316.jpg" alt=""></p>
-<blockquote>
-<p>本文总结了我在工作中使用了哪些命令来分析Log文件获取我想要的信息。<br>下面介绍我自己常用的一些linux命令（如果有什么错误或者不对的地方欢迎指出，也请大家多多指教）：</p>
-</blockquote>
-<h2 id="1、tail-命令"><a href="#1、tail-命令" class="headerlink" title="1、tail 命令"></a>1、tail 命令</h2><p><strong>1.1 tail命令默认在屏幕上显示指定文件的末尾10行</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail localhost.2018-01-23.log</span><br></pre></td></tr></table></figure>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard1.png" alt="默认显示最新10行"></p>
-<p><strong>1.2 tail -f 当文件增长时,输出后续添加的数据</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f localhost.2018-01-23.log</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard2.png" alt="自动显示新增的文件内容"></p>
-<p><strong>1.3 查看底部即最新200条日记记录，自动显示新增的文件内容</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f catalina.out -n 200</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard3.png" alt="查看最后200条日记记录"></p>
-<p><strong>1.4  查看字符”HeartbeatHandler” 前后2条记录，自动显示新增的文件内容</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f catalina.out |grep &quot;HeartbeatHandler&quot; -C 2</span><br></pre></td></tr></table></figure>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard4.png" alt="查看指定的字符串前后几行的最新记录"></p>
-<p><strong>1.5 tail -f *.log 同时监视多个文件的变化 自动显示新增的文件内容 文件排列显示</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f *.log</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard5.png" alt="同时查看多个文件"></p>
-<p><strong>1.6 退出，按下CTRL+C。</strong></p>
-<h2 id="2、vi命令"><a href="#2、vi命令" class="headerlink" title="2、vi命令"></a>2、vi命令</h2><blockquote>
-<p>ps:这个命令我用的少，不过我老大一直在用</p>
-</blockquote>
-<blockquote>
-<p>vi命令是linux操作系统中最通用的全屏幕纯文本编辑器</p>
-</blockquote>
-<blockquote>
-<p>其中参数 -R：表示以只读方式打开文件；</p>
-</blockquote>
-<p><strong>2.1 vi只读模式打开文件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi -R catalina.out</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard6.png" alt="vi只读模式打开文件"></p>
-<p><strong>2.2 进去后光标定位在首行 要让它显示行号话：输入:<code>set nu</code></strong></p>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard7.png" alt="显示行号"></p>
-<p><strong>2.3 要跳到文件的开始的位置即第一行：输入<code>gg</code></strong></p>
-<p><strong>2.4 要跳到文件的结束的位置即最后一行:输入<code>G</code></strong></p>
-<p><strong>2.5 要跳到文件的指定的位置 如到定位到第100行：输入<code>100G</code></strong></p>
-<blockquote>
-<p>在vi里面用Go的缩写字母g表示光标跳动</p>
-</blockquote>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard8.png" alt="定位到第100行的位置"></p>
-<p><strong>2.6 从文件头往后面搜索字符串“==”：输入 :<code>/==</code></strong></p>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard9.png" alt="向后搜索指定字符"></p>
-<p><strong>2.7 从文件尾往前搜索字符串“==”:输入 :<code>?==</code></strong></p>
-<p><strong>2.8 在搜索字符串的过程中要找到下一个符合搜索条件的地方:按<code>n</code></strong></p>
-<p><strong>2.9 在搜索字符串的过程中要找到上一个符合搜索条件的地方：按<code>N</code><br>在vi里面字母n是Next的缩写 表示下一个</strong></p>
-<p><strong>2.10 退出vi的命令是：<code>:q!</code></strong></p>
-<h2 id="3、less命令"><a href="#3、less命令" class="headerlink" title="3、less命令"></a>3、less命令</h2><blockquote>
-<p>这个命令是我常用的命令，不过时间一久就会忘记一些常用的操作</p>
+        <h2 id="历史背景"><a href="#历史背景" class="headerlink" title="历史背景"></a>历史背景</h2><p>多年以来，Spring IO平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理。<br>而且随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重；繁多的配置，低下的开发效率，复杂的部署流程以及第三方技术集成难度大。<br><a id="more"></a><br>Spring团队的CTO回应了这些批评，并且特别提到该平台的目标之一就是实现免XML配置的开发体验。<br>在上述环境下Spring Boot 应运而生，Spring Boot所实现的功能超出了这个任务的描述，开发人员不仅不再需要编写XML，而且在一些场景中甚至不需要编写繁琐的import语句。<br>在对外公开的beta版本刚刚发布之时，Spring Boot描述了如何使用该框架在140个字符内实现可运行的web应用，从而获得了极大的关注度。</p>
+<h2 id="什么是Spring-Boot"><a href="#什么是Spring-Boot" class="headerlink" title="什么是Spring Boot?"></a>什么是Spring Boot?</h2><ul>
+<li>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。   </li>
+<li>该框架使用了特定的方式（继承starter，约定优先于配置）来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，Spring Boot致力于在蓬勃发展的快速应用开发领域成为领导者。     </li>
+<li>Spring boot 是基于Spring4进行设计的，承载了原有Spring框架的优秀基因。它并不是一个框架，从根本上讲，它就是一些库的集合，maven 或者gradle项目导入相应依赖即可使用Spring Boot ,而且无需自行管理这些库的版本。  </li>
+<li>Spring boot 并不是要成为Spring IO 平台里面众多项目的替代者。Spring Boot 的目标不在于为已经解决的问题域提供新的解决文案，而是为平台 带来另一种的开发体验，从而简化以些已经技术的使用。  </li>
+</ul>
+<h2 id="Spring-Boot-的特性"><a href="#Spring-Boot-的特性" class="headerlink" title="Spring Boot 的特性"></a>Spring Boot 的特性</h2><ol>
+<li>快速构建项目；</li>
+<li>对主流开发框架的无配置集成；</li>
+<li>项目可以独立运行，无须外部依赖Servlet容器；</li>
+<li>提供运行时的应用监控；</li>
+<li>极大地提高了开发、部署效率；</li>
+<li>与云计算的天然集成；  </li>
+</ol>
+<p><strong>具体可以分为以下几点：</strong></p>
+<h3 id="1、无需要手动管理依赖jar包的版本"><a href="#1、无需要手动管理依赖jar包的版本" class="headerlink" title="1、无需要手动管理依赖jar包的版本"></a>1、无需要手动管理依赖jar包的版本</h3><p> Spring Boot 通过spring boot starter 项目管理提供的所有依赖的版本，当升级Spring boot 时，这些依赖版本也会随之升级。个人无需指定版本号，但是也可以自定义版本号覆盖Spring Boot的默认值。</p>
+<h3 id="2、自动配置，无需xml"><a href="#2、自动配置，无需xml" class="headerlink" title="2、自动配置，无需xml"></a>2、自动配置，无需xml</h3><p>Spring Boot 尝试根据你添加的jar依赖自动配置你的应用。Spring Boot 的这种自动配置是非侵入式的，你可以定义自己的配置或bean来替代自动配置的内容。</p>
+<h3 id="3、外部化配置"><a href="#3、外部化配置" class="headerlink" title="3、外部化配置"></a>3、外部化配置</h3><p>Spring Boot 可以使用properties文件，yaml文件，环境变量，命令行参数等外部化配置。属性值可以使用@Value注解直接注入到bean中，并通过Spring的Environment抽象或经过@configurationProperties注解绑定到结构化对象来访问。</p>
+<h3 id="4、嵌入式servlet容器"><a href="#4、嵌入式servlet容器" class="headerlink" title="4、嵌入式servlet容器"></a>4、嵌入式servlet容器</h3><p>Spring Boot 的web模块内置嵌入到Tomcat ,Jetty来构建自包含的servlet容器。servlet容器还可以通过外部化配置来相关定制属性，如<br>server.port,server.session.persistence等。</p>
+<h3 id="5、无缝集成Spring-security-Spring-data-Spring-message等框架"><a href="#5、无缝集成Spring-security-Spring-data-Spring-message等框架" class="headerlink" title="5、无缝集成Spring security,Spring data,Spring message等框架"></a>5、无缝集成Spring security,Spring data,Spring message等框架</h3><p>Spring Boot 通过stater pom 来导入这些依赖，当发现相关jar在classpath中时，Spring Boot将启动相应的自动配置。例如，如果security的jar在classpath中，Spring Boot 的web应用将自动启动安全限制，并且默认启动basic认证。</p>
+<p><strong> Spring Boot提供了很多”开箱即用“的依赖模块，都是以spring-boot-starter-xx作为命名的。下面列举一些常用的模块</strong><br><img src="http://payu91z1p.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="">  </p>
+<h3 id="7、devtools提供的开发时特性"><a href="#7、devtools提供的开发时特性" class="headerlink" title="7、devtools提供的开发时特性"></a>7、devtools提供的开发时特性</h3><p>Spring Boot的devtools模块可以为应用增加开发时（development time）特性，例如开发环境属性默认值，自动重启，LiveReload（在自愿发生变化时触发浏览器刷新），全局设置等。  </p>
+<h3 id="8、Actuator提供的生产特性（health，metrics等）"><a href="#8、Actuator提供的生产特性（health，metrics等）" class="headerlink" title="8、Actuator提供的生产特性（health，metrics等）"></a>8、Actuator提供的生产特性（health，metrics等）</h3><p>Actuator是个机器术语，目前没有统一的翻译，可以直译为促动器或执行器，Actuator通过微小的改变就可以产生很大的移动。<br>Spring Boot Actuator为你的应用提供一些生产环境必需的特性，如审计(audit)，健康(health)和数据采集(metrics)等。使你可以在部署应用到生产环境后，通过HTTP（需要SpringMVC），JMX甚至remote shell(SSH, Telnet)等来管理和监视应用。<br>例如，HTTP环境下，访问 contextUrl/health 路径即可查询当前环境的磁盘空间，应用和数据库的状态等；访问contextUrl/metrics路径即可查询当前jvm的内存使用情况，线程池的状态等。</p>
+<h2 id="使用Spring-Boot有什么好处"><a href="#使用Spring-Boot有什么好处" class="headerlink" title="使用Spring Boot有什么好处"></a>使用Spring Boot有什么好处</h2><ul>
+<li>Spring Boot 使编码变简单</li>
+<li>Spring Boot 使配置变简单</li>
+<li>Spring Boot 使部署变简单</li>
+<li>Spring Boot 使监控变简单  </li>
+</ul>
+<h2 id="SpringBoot和SpringMVC的区别"><a href="#SpringBoot和SpringMVC的区别" class="headerlink" title="SpringBoot和SpringMVC的区别"></a>SpringBoot和SpringMVC的区别</h2><blockquote>
+<p>spring boot只是一个配置工具,整合工具,辅助工具.<br>springmvc是框架,项目中实际运行的代码.</p>
 </blockquote>
 <blockquote>
-<p>less命令可以用来浏览文字文件的内容，用less命令显示文件时，允许用户向前或向后浏览文件。</p>
+<p>Spring MVC提供了一种轻度耦合的方式来开发web应用。<br>Spring Boot实现了自动配置，降低了项目搭建的复杂度。</p>
 </blockquote>
-<p><strong>3.1 less catalina.out 进入后显示的是文件的首页</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less catalina.out</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard10.png" alt="less命令"></p>
-<p><strong>3.2 从文件头往后面搜索字符串“==”：输入 <code>/==</code></strong><br><img src="http://payu91z1p.bkt.clouddn.com/clipboard11.png" alt="向下搜索"></p>
-<p><strong>3.3 从文件尾往前搜索字符串”==“:输入 <code>?==</code></strong></p>
-<p><strong>3.4 在搜索字符串的过程中要找到下一个符合搜索条件的地方:按<code>n</code> （与 / 或 ? 有关）</strong></p>
-<p><strong>3.5 在搜索字符串的过程中要找到上一个符合搜索条件的地方：按<code>N</code> （与 / 或 ? 有关）</strong></p>
-<p><strong>3.6 按<code>b</code>向后翻一页 ，按 <code>d</code>向后翻半页</strong></p>
-<p><strong>3.7按<code>u</code>向前滚动半页 ，按<code>y</code>向前滚动一行 <code>按空格键</code> 滚动一行 ，按<code>回车键</code> 滚动一页</strong></p>
-<p><strong>3.8 显示 字符串中文件中出现的次数</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less catalina.out | grep &quot;==&quot; | wc -l</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://payu91z1p.bkt.clouddn.com/clipboard12.png" alt="统计错误出现的次数"></p>
-<p><strong>3.9 要退出less程序，应按<code>Q</code>键。</strong></p>
 <blockquote>
-<p>以上记录的常用命令 只有本人自己常用 ，整理出来跟大家一起交流。不喜勿喷，我的内心很脆弱。谢谢！</p>
+<p>Spring 是一个“引擎”；<br>Spring MVC 是基于Spring的一个 MVC 框架；<br>Spring Boot 是基于Spring4的条件注册的一套快速开发整合包。</p>
 </blockquote>
+<h2 id="Spring-Boot有哪些不足？"><a href="#Spring-Boot有哪些不足？" class="headerlink" title="Spring Boot有哪些不足？"></a>Spring Boot有哪些不足？</h2><ul>
+<li>现时Spring Boot的还需要与外围的框架进行集成  </li>
+<li>在服务发现和注册方面  </li>
+<li>在认证鉴权方面  </li>
+<li>在监控方面<br><strong>综上，Spring Boot 是微服务框架的起点</strong></li>
+</ul>
 
       
     
@@ -443,13 +413,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/06/25/ga/">开发人员 在linux服务器上查看日记常用命令</a></p>
+        <p><span>本文标题:</span><a  href="/2018/07/12/Spring-Boot学习笔记系列-简介/">Spring Boot学习笔记系列之Spring Boot简介</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 老猫 的个人博客">老猫</a></p>
-        <p><span>发布时间:</span>2018年06月26日 - 04时52分</p>
-        <p><span>最后更新:</span>2018年07月06日 - 02时25分</p>
+        <p><span>发布时间:</span>2018年07月12日 - 16时34分</p>
+        <p><span>最后更新:</span>2018年07月15日 - 21时22分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/25/ga/" title="开发人员 在linux服务器上查看日记常用命令">https://www.easytouseit.win/2018/06/25/ga/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://www.easytouseit.win/2018/06/25/ga/　　作者: 老猫" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/07/12/Spring-Boot学习笔记系列-简介/" title="Spring Boot学习笔记系列之Spring Boot简介">https://www.easytouseit.win/2018/07/12/Spring-Boot学习笔记系列-简介/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://www.easytouseit.win/2018/07/12/Spring-Boot学习笔记系列-简介/　　作者: 老猫" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -460,15 +430,20 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a  href="/2018/07/12/Java8新特性学习知识点列表（今年内啃完）/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Hexo 下博客写文章的常用Markdown语法记录
+          Java8新特性学习知识点列表（今年内啃完）
         
       </div>
     </a>
   
+  
+    <a  href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo 下博客写文章的常用Markdown语法记录</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -478,7 +453,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、tail-命令"><span class="toc-number">1.</span> <span class="toc-text">1、tail 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、vi命令"><span class="toc-number">2.</span> <span class="toc-text">2、vi命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、less命令"><span class="toc-number">3.</span> <span class="toc-text">3、less命令</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#历史背景"><span class="toc-number">1.</span> <span class="toc-text">历史背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Spring-Boot"><span class="toc-number">2.</span> <span class="toc-text">什么是Spring Boot?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot-的特性"><span class="toc-number">3.</span> <span class="toc-text">Spring Boot 的特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、无需要手动管理依赖jar包的版本"><span class="toc-number">3.1.</span> <span class="toc-text">1、无需要手动管理依赖jar包的版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、自动配置，无需xml"><span class="toc-number">3.2.</span> <span class="toc-text">2、自动配置，无需xml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、外部化配置"><span class="toc-number">3.3.</span> <span class="toc-text">3、外部化配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、嵌入式servlet容器"><span class="toc-number">3.4.</span> <span class="toc-text">4、嵌入式servlet容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、无缝集成Spring-security-Spring-data-Spring-message等框架"><span class="toc-number">3.5.</span> <span class="toc-text">5、无缝集成Spring security,Spring data,Spring message等框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、devtools提供的开发时特性"><span class="toc-number">3.6.</span> <span class="toc-text">7、devtools提供的开发时特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、Actuator提供的生产特性（health，metrics等）"><span class="toc-number">3.7.</span> <span class="toc-text">8、Actuator提供的生产特性（health，metrics等）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Spring-Boot有什么好处"><span class="toc-number">4.</span> <span class="toc-text">使用Spring Boot有什么好处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringBoot和SpringMVC的区别"><span class="toc-number">5.</span> <span class="toc-text">SpringBoot和SpringMVC的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot有哪些不足？"><span class="toc-number">6.</span> <span class="toc-text">Spring Boot有哪些不足？</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -527,7 +502,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: 'Tue Jun 26 2018 04:52:00 GMT+0800',
+  id: 'Thu Jul 12 2018 16:34:00 GMT+0800',
   owner: 'guojianming',
   repo: 'blog',
   oauth: {
@@ -545,13 +520,15 @@ gitment.render('comments')
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/" title="上一篇: Hexo 下博客写文章的常用Markdown语法记录">
+            <a  href="/2018/07/12/Java8新特性学习知识点列表（今年内啃完）/" title="上一篇: Java8新特性学习知识点列表（今年内啃完）">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a  href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/" title="下一篇: Hexo 下博客写文章的常用Markdown语法记录">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/15/Spring-Boot学习笔记知识点列表（今年内啃完）/">Spring Boot学习笔记知识点列表（今年内啃完）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Java8新特性学习知识点列表（今年内啃完）/">Java8新特性学习知识点列表（今年内啃完）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Spring-Boot学习笔记系列-简介/">Spring Boot学习笔记系列之Spring Boot简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/">Hexo 下博客写文章的常用Markdown语法记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/25/ga/">开发人员 在linux服务器上查看日记常用命令</a></li></ul>
