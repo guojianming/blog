@@ -7,22 +7,30 @@
   
   
   
-  <title>Spring Boot学习笔记系列之Spring Boot简介 | 老猫码坊</title>
+  <title>Spring Boot学习笔记系列之Spring Boot快速入门 | 老猫码坊</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="历史背景多年以来，Spring IO平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理。而且随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重；繁多的配置，低下的开发效率，复杂的部署流程以及第三方技术集成难度大。">
+  <meta name="description" content="本篇主要是Spring Boot的入门开发的基本知识，介绍如何使用Intellij IDEA 工具创建一个简单的hello world项目流程。">
 <meta name="keywords" content="Spring Boot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring Boot学习笔记系列之Spring Boot简介">
-<meta property="og:url" content="https://www.easytouseit.win/2018/07/12/Spring-Boot学习笔记系列-简介/index.html">
+<meta property="og:title" content="Spring Boot学习笔记系列之Spring Boot快速入门">
+<meta property="og:url" content="https://www.easytouseit.win/2018/07/15/Spring-Boot学习笔记系列之Spring-Boot快速入门/index.html">
 <meta property="og:site_name" content="老猫码坊">
-<meta property="og:description" content="历史背景多年以来，Spring IO平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理。而且随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重；繁多的配置，低下的开发效率，复杂的部署流程以及第三方技术集成难度大。">
+<meta property="og:description" content="本篇主要是Spring Boot的入门开发的基本知识，介绍如何使用Intellij IDEA 工具创建一个简单的hello world项目流程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
-<meta property="og:updated_time" content="2018-07-16T01:22:11.634Z">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716161028.png">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716161830.png">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716161858.png">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716164040.png">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716163855.png">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716164204.png">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716164145.png">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716162512.png">
+<meta property="og:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716170925.png">
+<meta property="og:updated_time" content="2018-07-16T09:44:05.380Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring Boot学习笔记系列之Spring Boot简介">
-<meta name="twitter:description" content="历史背景多年以来，Spring IO平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理。而且随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重；繁多的配置，低下的开发效率，复杂的部署流程以及第三方技术集成难度大。">
-<meta name="twitter:image" content="http://payu91z1p.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
+<meta name="twitter:title" content="Spring Boot学习笔记系列之Spring Boot快速入门">
+<meta name="twitter:description" content="本篇主要是Spring Boot的入门开发的基本知识，介绍如何使用Intellij IDEA 工具创建一个简单的hello world项目流程。">
+<meta name="twitter:image" content="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716161028.png">
   
     <link rel="alternative" href="/atom.xml" title="老猫码坊" type="application/atom+xml">
   
@@ -208,7 +216,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Java8/" style="font-size: 10px;">Java8</a> <a href="/tags/Spring-Boot/" style="font-size: 10px;">Spring Boot</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a>
+                        <a href="/tags/Java8/" style="font-size: 10px;">Java8</a> <a href="/tags/Spring-Boot/" style="font-size: 20px;">Spring Boot</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/微信公众号/" style="font-size: 10px;">微信公众号</a>
                     </div>
                 </section>
                 
@@ -283,11 +291,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-Spring-Boot学习笔记系列-简介" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Spring-Boot学习笔记系列之Spring-Boot快速入门" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/07/12/Spring-Boot学习笔记系列-简介/" class="article-date">
-      <time datetime="2018-07-12T08:34:00.000Z" itemprop="datePublished">2018-07-12</time>
+      <a  href="/2018/07/15/Spring-Boot学习笔记系列之Spring-Boot快速入门/" class="article-date">
+      <time datetime="2018-07-15T19:52:00.000Z" itemprop="datePublished">2018-07-16</time>
 </a>
 
     </div>
@@ -301,7 +309,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Spring Boot学习笔记系列之Spring Boot简介
+      Spring Boot学习笔记系列之Spring Boot快速入门
     </h1>
   
 
@@ -311,7 +319,7 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Sping-Boot-学习/">Sping Boot 学习</a>
+    <a class="article-category-link" href="/categories/Spring-Boot-学习/">Spring Boot 学习</a>
     </div>
 
 
@@ -327,50 +335,54 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="历史背景"><a href="#历史背景" class="headerlink" title="历史背景"></a>历史背景</h2><p>多年以来，Spring IO平台饱受非议的一点就是大量的XML配置以及复杂的依赖管理。<br>而且随着动态语言的流行（Ruby、Groovy、Scala、Node.js），Java的开发显得格外的笨重；繁多的配置，低下的开发效率，复杂的部署流程以及第三方技术集成难度大。<br><a id="more"></a><br>Spring团队的CTO回应了这些批评，并且特别提到该平台的目标之一就是实现免XML配置的开发体验。<br>在上述环境下Spring Boot 应运而生，Spring Boot所实现的功能超出了这个任务的描述，开发人员不仅不再需要编写XML，而且在一些场景中甚至不需要编写繁琐的import语句。<br>在对外公开的beta版本刚刚发布之时，Spring Boot描述了如何使用该框架在140个字符内实现可运行的web应用，从而获得了极大的关注度。</p>
-<h2 id="什么是Spring-Boot"><a href="#什么是Spring-Boot" class="headerlink" title="什么是Spring Boot?"></a>什么是Spring Boot?</h2><ul>
-<li>Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。   </li>
-<li>该框架使用了特定的方式（继承starter，约定优先于配置）来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，Spring Boot致力于在蓬勃发展的快速应用开发领域成为领导者。     </li>
-<li>Spring boot 是基于Spring4进行设计的，承载了原有Spring框架的优秀基因。它并不是一个框架，从根本上讲，它就是一些库的集合，maven 或者gradle项目导入相应依赖即可使用Spring Boot ,而且无需自行管理这些库的版本。  </li>
-<li>Spring boot 并不是要成为Spring IO 平台里面众多项目的替代者。Spring Boot 的目标不在于为已经解决的问题域提供新的解决文案，而是为平台 带来另一种的开发体验，从而简化以些已经技术的使用。  </li>
-</ul>
-<h2 id="Spring-Boot-的特性"><a href="#Spring-Boot-的特性" class="headerlink" title="Spring Boot 的特性"></a>Spring Boot 的特性</h2><ol>
-<li>快速构建项目；</li>
-<li>对主流开发框架的无配置集成；</li>
-<li>项目可以独立运行，无须外部依赖Servlet容器；</li>
-<li>提供运行时的应用监控；</li>
-<li>极大地提高了开发、部署效率；</li>
-<li>与云计算的天然集成；  </li>
+        <p>本篇主要是Spring Boot的入门开发的基本知识，介绍如何使用Intellij IDEA 工具创建一个简单的hello world项目流程。</p>
+<a id="more"></a>
+<h2 id="开发准备"><a href="#开发准备" class="headerlink" title="开发准备"></a>开发准备</h2><ol>
+<li>开发环境JDK 1.8+  </li>
+<li>开发工具( Intellij IDEA )</li>
+<li>项目管理工具（ Maven 3.3.9 ）  </li>
+<li>Spring Boot 版本2.0.3.RELEASE </li>
 </ol>
-<p><strong>具体可以分为以下几点：</strong></p>
-<h3 id="1、无需要手动管理依赖jar包的版本"><a href="#1、无需要手动管理依赖jar包的版本" class="headerlink" title="1、无需要手动管理依赖jar包的版本"></a>1、无需要手动管理依赖jar包的版本</h3><p> Spring Boot 通过spring boot starter 项目管理提供的所有依赖的版本，当升级Spring boot 时，这些依赖版本也会随之升级。个人无需指定版本号，但是也可以自定义版本号覆盖Spring Boot的默认值。</p>
-<h3 id="2、自动配置，无需xml"><a href="#2、自动配置，无需xml" class="headerlink" title="2、自动配置，无需xml"></a>2、自动配置，无需xml</h3><p>Spring Boot 尝试根据你添加的jar依赖自动配置你的应用。Spring Boot 的这种自动配置是非侵入式的，你可以定义自己的配置或bean来替代自动配置的内容。</p>
-<h3 id="3、外部化配置"><a href="#3、外部化配置" class="headerlink" title="3、外部化配置"></a>3、外部化配置</h3><p>Spring Boot 可以使用properties文件，yaml文件，环境变量，命令行参数等外部化配置。属性值可以使用@Value注解直接注入到bean中，并通过Spring的Environment抽象或经过@configurationProperties注解绑定到结构化对象来访问。</p>
-<h3 id="4、嵌入式servlet容器"><a href="#4、嵌入式servlet容器" class="headerlink" title="4、嵌入式servlet容器"></a>4、嵌入式servlet容器</h3><p>Spring Boot 的web模块内置嵌入到Tomcat ,Jetty来构建自包含的servlet容器。servlet容器还可以通过外部化配置来相关定制属性，如<br>server.port,server.session.persistence等。</p>
-<h3 id="5、无缝集成Spring-security-Spring-data-Spring-message等框架"><a href="#5、无缝集成Spring-security-Spring-data-Spring-message等框架" class="headerlink" title="5、无缝集成Spring security,Spring data,Spring message等框架"></a>5、无缝集成Spring security,Spring data,Spring message等框架</h3><p>Spring Boot 通过stater pom 来导入这些依赖，当发现相关jar在classpath中时，Spring Boot将启动相应的自动配置。例如，如果security的jar在classpath中，Spring Boot 的web应用将自动启动安全限制，并且默认启动basic认证。</p>
-<p><strong> Spring Boot提供了很多”开箱即用“的依赖模块，都是以spring-boot-starter-xx作为命名的。下面列举一些常用的模块</strong><br><img src="http://payu91z1p.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="">  </p>
-<h3 id="7、devtools提供的开发时特性"><a href="#7、devtools提供的开发时特性" class="headerlink" title="7、devtools提供的开发时特性"></a>7、devtools提供的开发时特性</h3><p>Spring Boot的devtools模块可以为应用增加开发时（development time）特性，例如开发环境属性默认值，自动重启，LiveReload（在自愿发生变化时触发浏览器刷新），全局设置等。  </p>
-<h3 id="8、Actuator提供的生产特性（health，metrics等）"><a href="#8、Actuator提供的生产特性（health，metrics等）" class="headerlink" title="8、Actuator提供的生产特性（health，metrics等）"></a>8、Actuator提供的生产特性（health，metrics等）</h3><p>Actuator是个机器术语，目前没有统一的翻译，可以直译为促动器或执行器，Actuator通过微小的改变就可以产生很大的移动。<br>Spring Boot Actuator为你的应用提供一些生产环境必需的特性，如审计(audit)，健康(health)和数据采集(metrics)等。使你可以在部署应用到生产环境后，通过HTTP（需要SpringMVC），JMX甚至remote shell(SSH, Telnet)等来管理和监视应用。<br>例如，HTTP环境下，访问 contextUrl/health 路径即可查询当前环境的磁盘空间，应用和数据库的状态等；访问contextUrl/metrics路径即可查询当前jvm的内存使用情况，线程池的状态等。</p>
-<h2 id="使用Spring-Boot有什么好处"><a href="#使用Spring-Boot有什么好处" class="headerlink" title="使用Spring Boot有什么好处"></a>使用Spring Boot有什么好处</h2><ul>
+<h2 id="快速创建项目"><a href="#快速创建项目" class="headerlink" title="快速创建项目"></a>快速创建项目</h2><p><strong>第一步：</strong><br>打开IntelliJ IDEA，在菜单栏选择<code>File</code>菜单–&gt;<code>New</code>–&gt;<code>Project...</code>–&gt;<code>Spring Initializr</code>，<code>Project SDK</code>即选择JDK的版本，<code>Choose Initializer Service URL</code>选择 <code>Default:http://start.spring.io</code>  </p>
+<blockquote>
+<p>由于我这里用的多模快下创建项目，所以选择的是New Module,创建出来的项目都一样  </p>
+</blockquote>
+<p><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716161028.png" alt=""><br><strong>第二步：</strong><br>在接下来的页面我们创建一个<code>Maven项目</code>，如果有朋友对Maven不了解的话，可以参考网上的很多教程，这里不再详述了，我们在下图页面中填写项目相关的信息，接下来选择项目需要的依赖，我们在这里先<code>勾选Web</code>即可，在pom文件中变回生成Spring Boot Web相关的jar包，同时可以<code>选择Spring Boot的版本</code>。其他的依赖在此处不勾选也没有关系，需要的话可以在<code>pom.xml文件</code>中添加。<br><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716161830.png" alt=""><br><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716161858.png" alt=""><br><strong>第三步：</strong><br>项目创建完成后会自动生成很多文件，其中<code>BootHelloApplication</code>是用于<code>启动Spring Boot项</code>目的，有一个<code>main</code>方法，我们知道main方法是程序的入口，因此<code>右键点击Run &#39;BootHelloApplication&#39;</code>来运行程序。<br><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716164040.png" alt="">   </p>
+<blockquote>
+<p>其中是@SpringBootApplication组合注解，兼备了@EnableAutoConfiguration和@ComponentScan 注解的功能。  </p>
+</blockquote>
+<p>IntelliJ IDEA中集成了<code>Tomcat</code>，因此我们不需要在开发工具中针对Tomcat做任何配置，在运行结果中我们可以看到已经启动了Tomcat的<code>8080端口</code>，这个是Tomcat的默认端口。<br><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716163855.png" alt=""> </p>
+<p><strong>第四步：</strong><br>快速访问 输入<a href="http://localhost:8080/hello" target="_blank" rel="noopener">http://localhost:8080/hello</a><br>效果图如下，是不是很Easy?</p>
+<p><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716164204.png" alt=""><br><code>@RestController</code>的意思就是<code>controller</code>里面的方法都以json格式输出，不用再写什么jackjson配置的了！<br><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716164145.png" alt=""> </p>
+<h2 id="Spring-Boot-项目结构"><a href="#Spring-Boot-项目结构" class="headerlink" title="Spring Boot 项目结构"></a>Spring Boot 项目结构</h2><p><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716162512.png" alt=""><br>如上图所示，Spring Boot的基础结构共三个文件:</p>
+<ol>
+<li>src/main/java  程序开发以及主程序入口，自动生成启动类项目名+Application.java</li>
+<li><p>src/main/resources 配置文件，自动生成了配置文件application.properties  </p>
+</li>
+<li><p>src/test/java  测试程序  自动生成测试类项目名+ApplicationTests.java   </p>
+</li>
+</ol>
+<h2 id="Spring-Boot-Pom-文件"><a href="#Spring-Boot-Pom-文件" class="headerlink" title="Spring Boot Pom 文件"></a>Spring Boot Pom 文件</h2><p><img src="http://payu91z1p.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180716170925.png" alt=""><br>在Spring Boot中，模块的依赖都是以<code>starter</code>的方式进行，以 <code>spring-boot-starter-</code>方式命名，指明了具体的模块。Spring Boot生态中提供了丰富的starter供开发者使用在上面的技术栈中可以看到。<br>这种模块化的依赖，简化了大量的依赖配置。使用starter的依赖方式，可以把相应需要依赖的包一起依赖到项目中，而不像传统的Spring 需要各自依赖包。<br>如在Spring Boot中web模块，在传统的Spring配置中需要依赖<code>web服务的包</code>,在Spring Boot中，只需要依赖<code>spring-boot-starter-web</code>就能把相应的包一并依赖进来，极大的简化了配置。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;parent&gt;</span><br><span class="line">		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">		&lt;version&gt;2.0.3.RELEASE&lt;/version&gt;</span><br><span class="line">		&lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;</span><br><span class="line">	&lt;/parent&gt;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">继承 parent 父模块，`spring-boot-starter-parent `模块中包含了自动配置、日志和YAML ，使构建spring项目变得简单。  </span><br><span class="line">```java</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p> pom.xml中依赖 <code>spring-boot-starter-web</code> 模块，包括了<code>Tomcat和spring-webmvc</code>不需要指定version 版本，因为父模块中已经有默认配置，<code>如果需要指定版本可添加</code>。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">			&lt;scope&gt;test&lt;\scope&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>pom.xml中依赖 <code>spring-boot-starter-test</code> 测试模块，包括<code>JUnit、Hamcrest、Mockito</code> ;</p>
+<h2 id="Spring-Boot-单元测试"><a href="#Spring-Boot-单元测试" class="headerlink" title="Spring Boot 单元测试"></a>Spring Boot 单元测试</h2><p>打开的src/test/下的测试入口，编写简单的http请求来测试；使用mockmvc进行，利用<code>MockMvcResultHandlers.print()</code>打印出执行结果。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@SpringBootTest</span>(classes = MockServletContext.class)</span><br><span class="line"><span class="meta">@WebAppConfiguration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BootHelloApplicationTests</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">private</span> MockMvc mock;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Before</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUp</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		mock = MockMvcBuilders.standaloneSetup(<span class="keyword">new</span> HelloController()).build();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Test</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testHome</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		mock.perform(MockMvcRequestBuilders.get(<span class="string">"/hello"</span>).accept(MediaType.APPLICATION_JSON))</span><br><span class="line">				.andExpect(MockMvcResultMatchers.status().isOk())</span><br><span class="line">				.andDo(MockMvcResultHandlers.print())</span><br><span class="line">				.andReturn();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Spring-Boot-核心注解"><a href="#Spring-Boot-核心注解" class="headerlink" title="Spring Boot 核心注解"></a>Spring Boot 核心注解</h2><blockquote>
+<p>Spring Boot 推荐采用基于 Java Config 的配置方式，而不是传统的 XML。  </p>
+</blockquote>
+<ol>
+<li><strong>@SpringBootApplication</strong><br>让Spring boot 自动给程序进行必要配置，这个配置等同于：@Configuration, @EnableAutoConfiguration 和@CompoentScan。</li>
+<li><strong>@Configuration</strong><br>相当于传统的xml配置文件，如果有些第三方库需要用到xml文件，建议仍然通过@configuration类作为项目的配置主类–可以使用@ImportResource注解加载xml配置文件</li>
+<li><strong>@EnableAutoConfiguration</strong><br>Spring Boot 自动配置：尝试根据你添加jar依赖自动配置你的spring应用。</li>
+<li><strong>@CompoentScan</strong><br>表示将该类自动发现（扫描）并注册为Bean,并结合@Autowired注解导入。如果没有配置的话，SpringBoot会扫描启动类所在包下以及子包下使用了@service,@Repository等注解的类。</li>
+<li><strong>@PropertySource</strong><br>如果需要自定义的属性文件需要加载，可以使用该注解进行注入，并且用@Value配合使用</li>
+<li><strong>@Bean</strong><br>用@Bean标注方法等价于XML中配置的bean.</li>
+<li><strong>@Value</strong><br>注入Spring Boot application.properties配置的属性的值。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
 <li>Spring Boot 使编码变简单</li>
 <li>Spring Boot 使配置变简单</li>
 <li>Spring Boot 使部署变简单</li>
-<li>Spring Boot 使监控变简单  </li>
-</ul>
-<h2 id="SpringBoot和SpringMVC的区别"><a href="#SpringBoot和SpringMVC的区别" class="headerlink" title="SpringBoot和SpringMVC的区别"></a>SpringBoot和SpringMVC的区别</h2><blockquote>
-<p>spring boot只是一个配置工具,整合工具,辅助工具.<br>springmvc是框架,项目中实际运行的代码.</p>
-</blockquote>
-<blockquote>
-<p>Spring MVC提供了一种轻度耦合的方式来开发web应用。<br>Spring Boot实现了自动配置，降低了项目搭建的复杂度。</p>
-</blockquote>
-<blockquote>
-<p>Spring 是一个“引擎”；<br>Spring MVC 是基于Spring的一个 MVC 框架；<br>Spring Boot 是基于Spring4的条件注册的一套快速开发整合包。</p>
-</blockquote>
-<h2 id="Spring-Boot有哪些不足？"><a href="#Spring-Boot有哪些不足？" class="headerlink" title="Spring Boot有哪些不足？"></a>Spring Boot有哪些不足？</h2><ul>
-<li>现时Spring Boot的还需要与外围的框架进行集成  </li>
-<li>在服务发现和注册方面  </li>
-<li>在认证鉴权方面  </li>
-<li>在监控方面<br><strong>综上，Spring Boot 是微服务框架的起点</strong></li>
+<li>Spring Boot 使监控变简单</li>
 </ul>
 
       
@@ -413,13 +425,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/07/12/Spring-Boot学习笔记系列-简介/">Spring Boot学习笔记系列之Spring Boot简介</a></p>
+        <p><span>本文标题:</span><a  href="/2018/07/15/Spring-Boot学习笔记系列之Spring-Boot快速入门/">Spring Boot学习笔记系列之Spring Boot快速入门</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 老猫 的个人博客">老猫</a></p>
-        <p><span>发布时间:</span>2018年07月12日 - 16时34分</p>
-        <p><span>最后更新:</span>2018年07月15日 - 21时22分</p>
+        <p><span>发布时间:</span>2018年07月16日 - 03时52分</p>
+        <p><span>最后更新:</span>2018年07月16日 - 05时44分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/07/12/Spring-Boot学习笔记系列-简介/" title="Spring Boot学习笔记系列之Spring Boot简介">https://www.easytouseit.win/2018/07/12/Spring-Boot学习笔记系列-简介/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://www.easytouseit.win/2018/07/12/Spring-Boot学习笔记系列-简介/　　作者: 老猫" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/07/15/Spring-Boot学习笔记系列之Spring-Boot快速入门/" title="Spring Boot学习笔记系列之Spring Boot快速入门">https://www.easytouseit.win/2018/07/15/Spring-Boot学习笔记系列之Spring-Boot快速入门/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://www.easytouseit.win/2018/07/15/Spring-Boot学习笔记系列之Spring-Boot快速入门/　　作者: 老猫" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -430,18 +442,18 @@
 
 <nav id="article-nav">
   
-    <a  href="/2018/07/12/Java8新特性学习知识点列表（今年内啃完）/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a  href="/2018/07/23/文章发布已经转移到微信公众号（老猫码坊）/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Java8新特性学习知识点列表（今年内啃完）
+          文章发布已经转移到微信公众号（老猫码坊）
         
       </div>
     </a>
   
   
-    <a  href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo 下博客写文章的常用Markdown语法记录</div>
+    <a  href="/2018/07/15/Spring-Boot学习笔记知识点列表（今年内啃完）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring Boot学习笔记知识点列表（今年内啃完）</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -453,7 +465,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#历史背景"><span class="toc-number">1.</span> <span class="toc-text">历史背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Spring-Boot"><span class="toc-number">2.</span> <span class="toc-text">什么是Spring Boot?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot-的特性"><span class="toc-number">3.</span> <span class="toc-text">Spring Boot 的特性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、无需要手动管理依赖jar包的版本"><span class="toc-number">3.1.</span> <span class="toc-text">1、无需要手动管理依赖jar包的版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、自动配置，无需xml"><span class="toc-number">3.2.</span> <span class="toc-text">2、自动配置，无需xml</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、外部化配置"><span class="toc-number">3.3.</span> <span class="toc-text">3、外部化配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、嵌入式servlet容器"><span class="toc-number">3.4.</span> <span class="toc-text">4、嵌入式servlet容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、无缝集成Spring-security-Spring-data-Spring-message等框架"><span class="toc-number">3.5.</span> <span class="toc-text">5、无缝集成Spring security,Spring data,Spring message等框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、devtools提供的开发时特性"><span class="toc-number">3.6.</span> <span class="toc-text">7、devtools提供的开发时特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、Actuator提供的生产特性（health，metrics等）"><span class="toc-number">3.7.</span> <span class="toc-text">8、Actuator提供的生产特性（health，metrics等）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Spring-Boot有什么好处"><span class="toc-number">4.</span> <span class="toc-text">使用Spring Boot有什么好处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringBoot和SpringMVC的区别"><span class="toc-number">5.</span> <span class="toc-text">SpringBoot和SpringMVC的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot有哪些不足？"><span class="toc-number">6.</span> <span class="toc-text">Spring Boot有哪些不足？</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#开发准备"><span class="toc-number">1.</span> <span class="toc-text">开发准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速创建项目"><span class="toc-number">2.</span> <span class="toc-text">快速创建项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot-项目结构"><span class="toc-number">3.</span> <span class="toc-text">Spring Boot 项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot-Pom-文件"><span class="toc-number">4.</span> <span class="toc-text">Spring Boot Pom 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot-单元测试"><span class="toc-number">5.</span> <span class="toc-text">Spring Boot 单元测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-Boot-核心注解"><span class="toc-number">6.</span> <span class="toc-text">Spring Boot 核心注解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -502,7 +514,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: 'Thu Jul 12 2018 16:34:00 GMT+0800',
+  id: 'Mon Jul 16 2018 03:52:00 GMT+0800',
   owner: 'guojianming',
   repo: 'blog',
   oauth: {
@@ -520,18 +532,18 @@ gitment.render('comments')
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2018/07/12/Java8新特性学习知识点列表（今年内啃完）/" title="上一篇: Java8新特性学习知识点列表（今年内啃完）">
+            <a  href="/2018/07/23/文章发布已经转移到微信公众号（老猫码坊）/" title="上一篇: 文章发布已经转移到微信公众号（老猫码坊）">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/" title="下一篇: Hexo 下博客写文章的常用Markdown语法记录">
+            <a  href="/2018/07/15/Spring-Boot学习笔记知识点列表（今年内啃完）/" title="下一篇: Spring Boot学习笔记知识点列表（今年内啃完）">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/15/Spring-Boot学习笔记知识点列表（今年内啃完）/">Spring Boot学习笔记知识点列表（今年内啃完）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Java8新特性学习知识点列表（今年内啃完）/">Java8新特性学习知识点列表（今年内啃完）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Spring-Boot学习笔记系列-简介/">Spring Boot学习笔记系列之Spring Boot简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/">Hexo 下博客写文章的常用Markdown语法记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/25/ga/">开发人员 在linux服务器上查看日记常用命令</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/23/文章发布已经转移到微信公众号（老猫码坊）/">文章发布已经转移到微信公众号（老猫码坊）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/15/Spring-Boot学习笔记系列之Spring-Boot快速入门/">Spring Boot学习笔记系列之Spring Boot快速入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/15/Spring-Boot学习笔记知识点列表（今年内啃完）/">Spring Boot学习笔记知识点列表（今年内啃完）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Java8新特性学习知识点列表（今年内啃完）/">Java8新特性学习知识点列表（今年内啃完）</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/11/Spring-Boot学习笔记系列-简介/">Spring Boot学习笔记系列之Spring Boot简介</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/07/Hexo-下博客写文章的常用Markdown语法记录/">Hexo 下博客写文章的常用Markdown语法记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/25/ga/">开发人员 在linux服务器上查看日记常用命令</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
